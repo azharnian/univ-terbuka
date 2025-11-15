@@ -1,0 +1,26 @@
+# MacOS
+.DS_Store
+
+# Folder output LaTeX
+/out/
+
+# File-file build LaTeX (auxiliary)
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.toc
+*.out
+*.nav
+*.snm
+*.vrb
+*.lof
+*.lot
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# PDF hasil compile
+*.pdf

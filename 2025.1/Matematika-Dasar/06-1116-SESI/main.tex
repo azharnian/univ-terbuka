@@ -1,0 +1,217 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath, amssymb}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+\usepackage{hyperref}
+\renewcommand{\arraystretch}{1.6}
+
+\usepackage{hyperref}
+\renewcommand{\arraystretch}{1.6}
+
+\newcommand{\psetheader}[4]{%
+  \noindent
+  \begin{minipage}[t]{0.6\textwidth}
+    #1\\
+    #2\\
+    #3
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.35\textwidth}
+    \raggedleft #4
+  \end{minipage}
+
+  \vspace{0.5\baselineskip}
+  \hrule
+  \vspace{1em}
+}
+
+\title{Matematika Dasar - Diskusi Sesi 6}
+\author{Anas Azhar \\ FST - Matematika - 056413438 \\ Universitas Terbuka}
+\date{\today}
+
+
+\begin{document}
+
+\psetheader
+  {\textit{Matematika Dasar} - Diskusi Sesi 6}
+  {Universitas Terbuka, FST - Matematika, 2025.1}
+  {Anas Azhar (056413438)}
+  {Minggu, 16 November 2025}
+
+\section*{Soal 1}
+
+\textbf{a.  $f(x) = x^2 + 2$}
+
+\textbf{Domain:} \\
+Fungsi ini adalah polinom, sehingga terdefinisi untuk semua bilangan real:
+\[
+\text{Domain } f = (-\infty, \infty).
+\]
+
+\textbf{Range:} \\
+Karena \(x^2 \ge 0\), nilai minimum fungsi adalah:
+\[
+f_{\min} = 0 + 2 = 2.
+\]
+Dan untuk \(x \to \infty\), \(f(x) \to \infty\). Jadi:
+\[
+\text{Range } f = [2,\infty).
+\]
+
+\textbf{b. $g(x) = \sqrt{x - 3}$}
+
+\textbf{Domain:} \\
+Agar akar terdefinisi, harus berlaku:
+\[
+x - 3 \ge 0 \quad \Rightarrow \quad x \ge 3.
+\]
+Sehingga:
+\[
+\text{Domain } g = [3,\infty).
+\]
+
+\textbf{Range:} \\
+Nilai akar tidak pernah negatif. Untuk \(x = 3\):
+\[
+g(3) = \sqrt{0} = 0.
+\]
+Jika \(x\) semakin besar, nilai \(g(x)\) semakin besar:
+\[
+\text{Range } g = [0,\infty).
+\]
+
+\section*{Soal 2}
+
+Dimisalkan fungsi
+\[
+y =
+\begin{cases}
+x^2 - 1, & x < 0,\\[4pt]
+\sqrt{x}, & x \ge 0.
+\end{cases}
+\]
+
+Untuk menggambar grafik fungsi tersebut, perhatikan dua bagian berikut.
+
+\begin{enumerate}
+  \item Untuk $x < 0$ berlaku $y = x^2 - 1$.\\
+        Grafik $y = x^2 - 1$ adalah parabola yang terbuka ke atas dengan puncak di $(0,-1)$.
+        Namun karena syaratnya $x<0$, yang digambar hanya \emph{setengah kiri} parabola.
+        Titik $(0,-1)$ \textbf{tidak} termasuk, sehingga digambar sebagai lingkaran kosong.
+
+  \item Untuk $x \ge 0$ berlaku $y = \sqrt{x}$.\\
+        Grafik $y = \sqrt{x}$ adalah kurva akar yang mulai dari titik $(0,0)$ dan 
+        menuju ke kanan. Karena $x \ge 0$, titik $(0,0)$ \textbf{termasuk} dalam grafik
+        (digambar sebagai titik penuh).
+\end{enumerate}
+
+Dengan demikian, grafik fungsi terdiri dari:
+\begin{itemize}
+  \item setengah parabola $y = x^2 - 1$ di sisi kiri sumbu-$y$ untuk $x<0$,
+        dengan lingkaran kosong di titik $(0,-1)$;
+  \item kurva akar $y = \sqrt{x}$ di sisi kanan sumbu-$y$ untuk $x \ge 0$,
+        dengan titik penuh di $(0,0)$.
+\end{itemize}
+
+% Opsional: sketsa grafik dengan TikZ
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+  % Sumbu
+  \draw[->] (-4,0) -- (4,0) node[right] {$x$};
+  \draw[->] (0,-2) -- (0,4) node[above] {$y$};
+
+  % y = x^2 - 1, x<0
+  \draw[domain=-3:0, smooth, samples=80] plot (\x,{(\x)^2 - 1});
+  % titik kosong di (0,-1)
+  \draw (0,-1) circle (2pt);
+
+  % y = sqrt(x), x>=0
+  \draw[domain=0:4, smooth, samples=80] plot (\x,{sqrt(\x)});
+  % titik penuh di (0,0)
+  \fill (0,0) circle (2pt);
+\end{tikzpicture}
+\end{center}
+
+\section*{Soal 3}
+
+\textbf{Diberikan fungsi:}
+\[
+f(x) = \frac{1}{2}x^{3} + 2.
+\]
+
+\textbf{1. Memeriksa apakah fungsi satu-satu (injective).}
+
+Turunan dari fungsi adalah
+\[
+f'(x) = \frac{3}{2}x^{2}.
+\]
+
+Karena $f'(x) \ge 0$ untuk semua $x$ dan hanya bernilai $0$ pada $x=0$, maka fungsi selalu meningkat (monoton naik). Fungsi yang monoton naik pada seluruh domainnya merupakan fungsi satu-satu.
+
+\[
+\boxed{f(x)\ \text{adalah fungsi satu-satu (injective).}}
+\]
+
+\textbf{2. Memeriksa apakah fungsi pada (surjective).}
+
+Karena fungsi kubik memetakan seluruh $\mathbb{R}$ ke $\mathbb{R}$ dan penambahan serta perkalian konstanta tidak mengubah sifat tersebut, maka
+\[
+\lim_{x \to -\infty} f(x) = -\infty, \qquad 
+\lim_{x \to \infty} f(x) = \infty.
+\]
+
+Dengan demikian range fungsi adalah seluruh bilangan real.
+
+\[
+\boxed{f(x)\ \text{adalah fungsi pada (surjective) terhadap}\ \mathbb{R}.}
+\]
+
+\textbf{3. Kesimpulan.}
+
+Karena fungsi tersebut bersifat satu-satu dan pada, maka
+\[
+\boxed{f(x)\ \text{merupakan fungsi bijektif (satu-satu dan pada).}}
+\]
+
+\section*{Soal 4}
+
+Diketahui
+\[
+f(x) = x + 8, \qquad g(x) = \sqrt{x + 1}.
+\]
+
+\textbf{a. Menentukan } $(f \circ g)(x)$
+\[
+(f \circ g)(x) = f(g(x)).
+\]
+Karena $g(x) = \sqrt{x + 1}$, maka
+\[
+f(g(x)) = f\big(\sqrt{x+1}\big)
+= \sqrt{x+1} + 8.
+\]
+Jadi,
+\[
+\boxed{(f \circ g)(x) = \sqrt{x+1} + 8}.
+\]
+
+\textbf{b. Menentukan } $(g \circ f)(x)$
+\[
+(g \circ f)(x) = g(f(x)).
+\]
+Karena $f(x) = x + 8$, maka
+\[
+g(f(x)) = g(x+8)
+= \sqrt{(x+8)+1}
+= \sqrt{x + 9}.
+\]
+Sehingga,
+\[
+\boxed{(g \circ f)(x) = \sqrt{x + 9}}.
+\]
+
+\end{document}

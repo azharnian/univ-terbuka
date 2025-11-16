@@ -1,0 +1,357 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{hyperref}
+\renewcommand{\arraystretch}{1.6}
+
+\newcommand{\psetheader}[4]{%
+  \noindent
+  \begin{minipage}[t]{0.6\textwidth}
+    #1\\
+    #2\\
+    #3
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.35\textwidth}
+    \raggedleft #4
+  \end{minipage}
+
+  \vspace{0.5\baselineskip}
+  \hrule
+  \vspace{1em}
+}
+
+\title{Aljabar Elementer - Diskusi Sesi 6}
+\author{Anas Azhar \\ FST - Matematika - 056413438 \\ Universitas Terbuka}
+\date{\today}
+
+
+\begin{document}
+
+\psetheader
+  {\textit{Aljabar Elementer} - Diskusi Sesi 6}
+  {Universitas Terbuka, FST - Matematika, 2025.1}
+  {Anas Azhar (056413438)}
+  {Minggu, 16 November 2025}
+
+\section*{Soal : Berilah contoh sebuah matriks $3 \times 3 $, kemudian carilah inversnya menggunakan adjoint.}
+
+\section*{Solusi :}
+\noindent Matriks asal yang akan dicari inversnya adalah
+\[
+A =
+\begin{bmatrix}
+1 & \dfrac{1}{2} & 0\\[4pt]
+0 & 1 & \dfrac{1}{3}\\[4pt]
+0 & 0 & \dfrac{1}{2}
+\end{bmatrix}.
+\]
+
+\noindent \textbf{1. Determinan $\det(A)$ dengan metode Sarrus, untuk matriks umum}
+\[
+A = \begin{bmatrix}
+a & b & c\\
+d & e & f\\
+g & h & i
+\end{bmatrix},
+\]
+\noindent metode Sarrus menyatakan bahwa
+\[
+\det(A) = aei + bfg + cdh - ceg - bdi - afh.
+\]
+
+\noindent Pada matriks, elemen-elemennya adalah
+\[
+a = 1,\quad b = \dfrac{1}{2},\quad c = 0,\quad
+d = 0,\quad e = 1,\quad f = \dfrac{1}{3},\quad
+g = 0,\quad h = 0,\quad i = \dfrac{1}{2}.
+\]
+
+\noindent Maka
+\[
+\begin{aligned}
+\det(A)
+&= aei + bfg + cdh - ceg - bdi - afh\\[4pt]
+&= 1\cdot 1\cdot \dfrac{1}{2}
++ \dfrac{1}{2}\cdot \dfrac{1}{3}\cdot 0
++ 0\cdot 0\cdot 0\\[4pt]
+&\quad - \Big(
+0\cdot 1\cdot 0
++ \dfrac{1}{2}\cdot 0\cdot \dfrac{1}{2}
++ 1\cdot \dfrac{1}{3}\cdot 0
+\Big)\\[4pt]
+&= \dfrac{1}{2} + 0 + 0 - (0+0+0)\\[4pt]
+&= \dfrac{1}{2}.
+\end{aligned}
+\]
+
+
+\noindent \textbf{2. Menentukan setiap kofaktor $C_{ij}$, minor $M_{ij}$ yang merupakan determinan submatriks yang diperoleh dengan
+menghapus baris ke-$i$ dan kolom ke-$j$ dari $A$.
+Kofaktor didefinisikan sebagai}
+\[
+C_{ij} = (-1)^{i+j} M_{ij}.
+\]
+
+\noindent Berikut perhitungan \textbf{setiap} minor dan kofaktor:
+
+\noindent \textbf{Baris pertama}
+
+\paragraph{$C_{11}$}
+Hapus baris 1 dan kolom 1:
+\[
+M_{11} = 
+\begin{vmatrix}
+1 & \dfrac{1}{3}\\[4pt]
+0 & \dfrac{1}{2}
+\end{vmatrix}
+= 1\cdot \dfrac{1}{2} - \dfrac{1}{3}\cdot 0
+= \dfrac{1}{2}.
+\]
+\[
+C_{11} = (-1)^{1+1} M_{11} = (+1)\cdot \dfrac{1}{2} = \dfrac{1}{2}.
+\]
+
+\paragraph{$C_{12}$}
+Hapus baris 1 dan kolom 2:
+\[
+M_{12} = 
+\begin{vmatrix}
+0 & \dfrac{1}{3}\\[4pt]
+0 & \dfrac{1}{2}
+\end{vmatrix}
+= 0\cdot \dfrac{1}{2} - \dfrac{1}{3}\cdot 0 = 0.
+\]
+\[
+C_{12} = (-1)^{1+2} M_{12} = -0 = 0.
+\]
+
+\paragraph{$C_{13}$}
+Hapus baris 1 dan kolom 3:
+\[
+M_{13} =
+\begin{vmatrix}
+0 & 1\\[4pt]
+0 & 0
+\end{vmatrix}
+= 0\cdot 0 - 1\cdot 0 = 0.
+\]
+\[
+C_{13} = (-1)^{1+3} M_{13} = (+1)\cdot 0 = 0.
+\]
+
+\noindent \textbf{Baris kedua}
+
+\paragraph{$C_{21}$}
+Hapus baris 2 dan kolom 1:
+\[
+M_{21} =
+\begin{vmatrix}
+\dfrac{1}{2} & 0\\[4pt]
+0 & \dfrac{1}{2}
+\end{vmatrix}
+= \dfrac{1}{2}\cdot \dfrac{1}{2} - 0\cdot 0
+= \dfrac{1}{4}.
+\]
+\[
+C_{21} = (-1)^{2+1} M_{21} = -\,\dfrac{1}{4}.
+\]
+
+\paragraph{$C_{22}$}
+Hapus baris 2 dan kolom 2:
+\[
+M_{22} =
+\begin{vmatrix}
+1 & 0\\[4pt]
+0 & \dfrac{1}{2}
+\end{vmatrix}
+= 1\cdot \dfrac{1}{2} - 0\cdot 0
+= \dfrac{1}{2}.
+\]
+\[
+C_{22} = (-1)^{2+2} M_{22} = (+1)\cdot \dfrac{1}{2} = \dfrac{1}{2}.
+\]
+
+\paragraph{$C_{23}$}
+Hapus baris 2 dan kolom 3:
+\[
+M_{23} =
+\begin{vmatrix}
+1 & \dfrac{1}{2}\\[4pt]
+0 & 0
+\end{vmatrix}
+= 1\cdot 0 - \dfrac{1}{2}\cdot 0 = 0.
+\]
+\[
+C_{23} = (-1)^{2+3} M_{23} = -0 = 0.
+\]
+
+\noindent \textbf{Baris ketiga}
+
+\paragraph{$C_{31}$}
+Hapus baris 3 dan kolom 1:
+\[
+M_{31} =
+\begin{vmatrix}
+\dfrac{1}{2} & 0\\[4pt]
+1 & \dfrac{1}{3}
+\end{vmatrix}
+= \dfrac{1}{2}\cdot \dfrac{1}{3} - 0\cdot 1
+= \dfrac{1}{6}.
+\]
+\[
+C_{31} = (-1)^{3+1} M_{31} = (+1)\cdot \dfrac{1}{6} = \dfrac{1}{6}.
+\]
+
+\paragraph{$C_{32}$}
+Hapus baris 3 dan kolom 2:
+\[
+M_{32} =
+\begin{vmatrix}
+1 & 0\\[4pt]
+0 & \dfrac{1}{3}
+\end{vmatrix}
+= 1\cdot \dfrac{1}{3} - 0\cdot 0
+= \dfrac{1}{3}.
+\]
+\[
+C_{32} = (-1)^{3+2} M_{32} = -\,\dfrac{1}{3}.
+\]
+
+\paragraph{$C_{33}$}
+Hapus baris 3 dan kolom 3:
+\[
+M_{33} =
+\begin{vmatrix}
+1 & \dfrac{1}{2}\\[4pt]
+0 & 1
+\end{vmatrix}
+= 1\cdot 1 - \dfrac{1}{2}\cdot 0
+= 1.
+\]
+\[
+C_{33} = (-1)^{3+3} M_{33} = (+1)\cdot 1 = 1.
+\]
+
+\noindent \textbf{Matriks kofaktor dan adjoint}
+
+\noindent Dari semua $C_{ij}$ di atas, matriks kofaktor adalah
+\[
+C =
+\begin{bmatrix}
+C_{11} & C_{12} & C_{13}\\[4pt]
+C_{21} & C_{22} & C_{23}\\[4pt]
+C_{31} & C_{32} & C_{33}
+\end{bmatrix}
+=
+\begin{bmatrix}
+\dfrac{1}{2} & 0 & 0\\[4pt]
+-\dfrac{1}{4} & \dfrac{1}{2} & 0\\[4pt]
+\dfrac{1}{6} & -\dfrac{1}{3} & 1
+\end{bmatrix}.
+\]
+
+\noindent Adjoint dari $A$ adalah transpose dari matriks kofaktor:
+\[
+\operatorname{adj}(A) = C^{T} =
+\begin{bmatrix}
+\dfrac{1}{2} & -\dfrac{1}{4} & \dfrac{1}{6}\\[4pt]
+0 & \dfrac{1}{2} & -\dfrac{1}{3}\\[4pt]
+0 & 0 & 1
+\end{bmatrix}.
+\]
+
+\noindent \textbf{3. Invers matriks dengan adjoint}
+
+\noindent Rumus umum invers dengan adjoint:
+\[
+A^{-1} = \frac{1}{\det(A)} \operatorname{adj}(A).
+\]
+
+\noindent Karena $\det(A) = \dfrac{1}{2}$, maka
+\[
+A^{-1}
+= \frac{1}{\tfrac{1}{2}} \operatorname{adj}(A)
+= 2 \operatorname{adj}(A)
+= 2
+\begin{bmatrix}
+\dfrac{1}{2} & -\dfrac{1}{4} & \dfrac{1}{6}\\[4pt]
+0 & \dfrac{1}{2} & -\dfrac{1}{3}\\[4pt]
+0 & 0 & 1
+\end{bmatrix}.
+\]
+
+\noindent Sehingga
+\[
+A^{-1} =
+\begin{bmatrix}
+1 & -\dfrac{1}{2} & \dfrac{1}{3}\\[4pt]
+0 & 1 & -\dfrac{2}{3}\\[4pt]
+0 & 0 & 2
+\end{bmatrix}.
+\]
+
+\noindent \textbf{4. Verifikasi $A A^{-1} = I$}
+
+Sekarang kita buktikan bahwa
+\[
+A\cdot A^{-1} = I_3.
+\]
+
+Hitung
+\[
+A\cdot A^{-1} =
+\begin{bmatrix}
+1 & \dfrac{1}{2} & 0\\[4pt]
+0 & 1 & \dfrac{1}{3}\\[4pt]
+0 & 0 & \dfrac{1}{2}
+\end{bmatrix}
+\begin{bmatrix}
+1 & -\dfrac{1}{2} & \dfrac{1}{3}\\[4pt]
+0 & 1 & -\dfrac{2}{3}\\[4pt]
+0 & 0 & 2
+\end{bmatrix}.
+\]
+
+Elemen-elemen hasil kali:
+\[
+(1,1): 1\cdot 1 + \dfrac{1}{2}\cdot 0 + 0\cdot 0 = 1,
+\]
+\[
+(1,2): 1\cdot\left(-\dfrac{1}{2}\right) + \dfrac{1}{2}\cdot 1 + 0\cdot 0 = 0,
+\]
+\[
+(1,3): 1\cdot \dfrac{1}{3} + \dfrac{1}{2}\cdot\left(-\dfrac{2}{3}\right) + 0\cdot 2 = 0,
+\]
+\[
+(2,1): 0\cdot 1 + 1\cdot 0 + \dfrac{1}{3}\cdot 0 = 0,
+\]
+\[
+(2,2): 0\cdot\left(-\dfrac{1}{2}\right) + 1\cdot 1 + \dfrac{1}{3}\cdot 0 = 1,
+\]
+\[
+(2,3): 0\cdot \dfrac{1}{3} + 1\cdot\left(-\dfrac{2}{3}\right) + \dfrac{1}{3}\cdot 2 = 0,
+\]
+\[
+(3,1): 0\cdot 1 + 0\cdot 0 + \dfrac{1}{2}\cdot 0 = 0,
+\]
+\[
+(3,2): 0\cdot\left(-\dfrac{1}{2}\right) + 0\cdot 1 + \dfrac{1}{2}\cdot 0 = 0,
+\]
+\[
+(3,3): 0\cdot \dfrac{1}{3} + 0\cdot\left(-\dfrac{2}{3}\right) + \dfrac{1}{2}\cdot 2 = 1.
+\]
+
+Maka
+\[
+A\cdot A^{-1} =
+\begin{bmatrix}
+1 & 0 & 0\\[4pt]
+0 & 1 & 0\\[4pt]
+0 & 0 & 1
+\end{bmatrix} = I_3.
+\]
+
+Dengan demikian, $A^{-1}$ yang diperoleh benar merupakan invers dari $A$.
+\end{document}

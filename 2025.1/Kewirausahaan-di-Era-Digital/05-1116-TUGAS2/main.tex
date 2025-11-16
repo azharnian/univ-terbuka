@@ -1,0 +1,130 @@
+\documentclass[12pt]{article}
+
+% --------------------------------------------------------------
+% Packages
+% --------------------------------------------------------------
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{hyperref}      % untuk link dan footnote url
+\usepackage{datetime}      % untuk format tanggal
+\usepackage{float} % di preamble
+
+
+\newdateformat{indonesiandate}{\THEDAY~\monthname[\THEMONTH]~\THEYEAR}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+% --------------------------------------------------------------
+% Judul
+% --------------------------------------------------------------
+\title{Tugas 2}
+\author{Anas Azhar \\Fakultas Sains dan Teknologi - Matematika - 056413438\\Universitas Terbuka \\ Kewirausahaan di Era Digital}
+\date{\indonesiandate{\today}}
+
+% --------------------------------------------------------------
+\begin{document}
+% --------------------------------------------------------------
+
+\maketitle
+
+\noindent Berikut untuk pertanyaannya:
+
+\begin{enumerate}
+    \item Memenuhi harapan dan kebutuhan generasi muda khususnya Gen Z merupakan dua hal penting untuk mempertahankan \textit{sustainability business}. Salah satu hal penting yang harus diperhatikan oleh pengusaha adalah menemukan peluang. Jika Anda adalah seorang entrepreneur, identifikasikanlah peluang usaha yang saat ini masih terbuka dengan target sasaran Generasi Z. Jelaskan pendapat Anda, mengapa permasalahan yang akan Anda pecahkan merupakan kunci utama peluang usaha yang akan didirikan. Susunlah penjelasan Anda dan tambahkan dengan sumber referensi lain baik buku, liputan media cetak/digital, jurnal, dan lain-lain. Sampaikan jawaban Anda dalam ulasan 500 hingga 600 kata.
+    
+    \item Berdasarkan peluang usaha yang telah Anda identifikasi pada soal 1, lakukan analisis terhadap usaha tersebut terkait dengan segmen pasar dan target pasar yang dapat dilayanin usaha tersebut. Susunlah sebuah value proposition canvas dari ide usaha tersebut.  Jawaban disusun dalam bentuk ulasan yang terdiri atas 250 hingga 350 kata dan satu gambar value proposition canvas. 
+\end{enumerate}
+
+\noindent Jawaban saya: \\[0.5em]
+
+\begin{enumerate}
+    \item Generasi Z di Palembang memiliki karakter sebagai \textit{digital natives} yang sangat akrab dengan media sosial, gawai, dan transaksi daring. Di sisi lain, berbagai studi menunjukkan bahwa literasi keuangan mereka masih perlu ditingkatkan. Salah satu penelitian di Palembang menemukan bahwa literasi keuangan dan gaya hidup hedon berpengaruh signifikan terhadap perilaku keuangan Gen Z pada mahasiswa Prodi Manajemen Universitas Indo Global Mandiri Palembang.\footnote{Sianipar, B. A., Purnamasari, E., \& Ulum, M. B. (2023). \textit{Pengaruh Literasi Keuangan dan Lifestyle Hedon Terhadap Perilaku Keuangan Gen-Z pada Mahasiswa Prodi Manajemen Angkatan 2020 Universitas Indo Global Mandiri Palembang}. Ekono Insentif, 17(2), 84--95. DOI:10.36787/jei.v17i2.1167.} Temuan ini mengisyaratkan bahwa masih ada gap antara keinginan Gen Z untuk “melek finansial” dengan kemampuan mereka mengelola uang secara konsisten dalam keseharian.
+
+    Berdasarkan kondisi tersebut, peluang usaha yang saya identifikasi adalah \textbf{platform digital edukasi keuangan dan gaya hidup berkelanjutan khusus untuk Gen Z Palembang}. Platform ini dapat berbentuk aplikasi atau laman web yang menggabungkan konten edukasi finansial ringan (artikel singkat, video pendek, kuis interaktif) dengan fitur gamifikasi (tantangan menabung, poin, dan \textit{leaderboard}) serta komunitas lokal berbasis kota Palembang. Pendekatan ini relevan karena Gen Z cenderung lebih tertarik pada pembelajaran yang visual, interaktif, dan berbasis komunitas dibandingkan modul keuangan konvensional. Penelitian lain menunjukkan bahwa literasi keuangan berpengaruh terhadap perilaku menabung Gen Z di Indonesia, sehingga intervensi melalui platform yang dekat dengan gaya hidup digital mereka dapat menjadi solusi yang efektif.\footnote{Angelyna, C., \& Tannia, T. (2025). \textit{Literasi Keuangan Terhadap Perilaku Menabung Gen Z di Indonesia}. Business \& Management Journal, 21(1).}
+
+    Permasalahan utama yang coba dipecahkan adalah rendahnya literasi keuangan dan kecenderungan konsumsi yang tidak terarah pada sebagian Gen Z, yang jika dibiarkan dapat berdampak pada kestabilan finansial mereka dalam jangka panjang. Dengan adanya platform ini, Gen Z Palembang tidak hanya diberi pengetahuan, tetapi juga diajak mempraktikkan langsung melalui tantangan, simulasi, dan diskusi komunitas. Di sinilah letak kunci peluang usahanya: kita tidak sekadar menjual konten, tetapi \textit{mendesain perilaku} dan membangun kebiasaan finansial yang lebih sehat. Dalam jangka panjang, model bisnisnya dapat dikembangkan melalui skema freemium (fitur dasar gratis, fitur lanjutan berbayar), kerja sama dengan lembaga keuangan atau fintech, serta kolaborasi dengan komunitas digital lokal seperti Palembang Digital yang sudah aktif menjadi ekosistem bagi talenta muda di Palembang.\footnote{Palembang Digital. (2025). \textit{Ekosistem Startup dan Komunitas Digital di Palembang}. Diakses dari \url{https://palembangdigital.org/}.}
+
+    Model usaha ini selaras dengan prinsip \textit{sustainability business} karena menyentuh tiga dimensi sekaligus: ekonomi, sosial, dan edukasi. Dari sisi ekonomi, platform ini membantu Gen Z mengembangkan kebiasaan finansial yang lebih sehat, yang pada gilirannya meningkatkan kualitas daya beli dan perencanaan masa depan mereka. Dari sisi sosial, adanya komunitas lintas kampus dan komunitas lokal Palembang dapat memperkuat jejaring positif dan budaya berbagi pengetahuan. Dari sisi edukasi, konten yang terus di-\textit{update} menjadikan platform ini relevan dengan perubahan tren, teknologi, dan kebutuhan Gen Z. Dengan demikian, usaha ini bukan hanya mengejar keuntungan jangka pendek, tetapi juga berkontribusi pada pembangunan kapasitas generasi muda yang lebih siap menghadapi tantangan ekonomi di era digital.
+
+    \item Berdasarkan peluang usaha berupa \textbf{platform edukasi keuangan digital dan gaya hidup berkelanjutan untuk Generasi Z di Palembang}, analisis segmen pasar dapat dilakukan melalui tiga dimensi utama: demografis, psikografis, dan perilaku. Dari sisi \textit{demografis}, platform ini menyasar Gen Z berusia 17--27 tahun, meliputi pelajar SMA, mahasiswa, hingga lulusan baru di wilayah Palembang. Mereka berada pada tahap awal pengelolaan keuangan pribadi dan memiliki kebutuhan tinggi terhadap edukasi yang mudah dipahami. Secara \textit{psikografis}, Gen Z dikenal sebagai digital natives yang menyukai konten singkat, visual, dan interaktif. Mereka juga cenderung memilih layanan yang otentik, relevan dengan gaya hidup, serta menawarkan nilai keberlanjutan. Dari sisi \textit{perilaku}, kelompok ini aktif menggunakan media sosial, sering melakukan transaksi digital, dan terbuka terhadap aplikasi baru yang menarik serta ramah pengguna.
+
+    Target pasar utama dari usaha ini adalah mahasiswa Palembang (UNSRI, UMP, UIGM, POLSRI, UT, dan kampus lainnya) yang membutuhkan panduan praktis untuk mengatur keuangan. \textit{Secondary target} mencakup pelajar SMA kelas akhir yang mulai belajar menabung atau bekerja paruh waktu. Sementara itu, \textit{tertiary target} mencakup orang tua dan institusi pendidikan yang mencari platform edukatif untuk meningkatkan literasi finansial remaja. Dengan memahami beragam kebutuhan ini, platform dapat menawarkan pengalaman belajar finansial yang relevan, efektif, dan berkelanjutan.
+
+    Konsep \textit{Value Proposition Canvas (VPC)} digunakan untuk memastikan keselarasan antara kebutuhan pengguna dan nilai yang ditawarkan oleh usaha. Platform ini memberikan nilai melalui konten edukatif yang sederhana, fitur gamifikasi untuk memotivasi perubahan kebiasaan, serta komunitas lokal Palembang yang memberikan dukungan sosial. Dengan fokus pada pengalaman belajar yang cepat, interaktif, dan mudah diterapkan, platform ini mampu memberikan \textit{value} yang kuat bagi Gen Z dan membedakan dirinya dari aplikasi finansial yang bersifat generik.
+
+\bigskip
+    \noindent\textbf{Value Proposition Canvas}
+
+    \begin{center}
+    \begin{tabular}{|p{4.5cm}|p{4.5cm}|p{4.5cm}|}
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Customer Profile}} \\
+    \hline
+    \textbf{Jobs to be Done} & \textbf{Pains} & \textbf{Gains} \\
+    \hline
+    - Mengelola uang bulanan. \newline
+    - Belajar menabung dan investasi. \newline
+    - Membuat keputusan finansial bijak. \newline
+    - Bergabung dengan komunitas suportif. 
+    &
+    - Literasi finansial rendah. \newline
+    - Sulit memahami konsep keuangan konvensional. \newline
+    - Terpengaruh gaya hidup hedon. \newline
+    - Minim platform belajar yang menarik.
+    &
+    - Belajar keuangan dengan cara ringan. \newline
+    - Rekomendasi praktis dan relevan. \newline
+    - Tantangan interaktif untuk menabung. \newline
+    - Komunitas Gen Z Palembang.
+    \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Value Map}} \\
+    \hline
+    \textbf{Products \& Services} & \textbf{Pain Relievers} & \textbf{Gain Creators} \\
+    \hline
+    - Aplikasi edukasi finansial. \newline
+    - Video pendek, kuis, modul singkat. \newline
+    - Gamifikasi (poin, badge, leaderboard). \newline
+    - Komunitas lokal Palembang. \newline
+    - Tantangan tabungan dan budgeting.
+    &
+    - Konten ringkas dan mudah dipahami. \newline
+    - Sistem tantangan membentuk kebiasaan. \newline
+    - Dashboard keuangan sederhana.
+    &
+    - Pengalaman belajar fun dan interaktif. \newline
+    - Komunitas sebagai dukungan sosial. \newline
+    - Rekomendasi keuangan relevan. \newline
+    - Fitur progres dan pencapaian pribadi.
+    \\
+    \hline
+    \end{tabular}
+    \end{center}
+\end{enumerate}
+
+\bigskip
+\noindent \textbf{Referensi}  
+\begin{itemize}
+  \item Sianipar, B. A., Purnamasari, E., \& Ulum, M. B. (2023). Pengaruh Literasi Keuangan dan Lifestyle Hedon Terhadap Perilaku Keuangan Gen-Z pada Mahasiswa Prodi Manajemen Angkatan 2020 Universitas Indo Global Mandiri Palembang. \textit{Ekono Insentif}, 17(2), 84--95. DOI:10.36787/jei.v17i2.1167.
+  \item Angelyna, C., \& Tannia, T. (2025). Literasi Keuangan Terhadap Perilaku Menabung Gen Z di Indonesia. \textit{Business \& Management Journal}, 21(1). \url{https://journal.ubm.ac.id/index.php/business-management/article/view/8142}
+  \item Palembang Digital. (2025). Ekosistem Startup dan Komunitas Digital di Palembang. Diakses dari \url{https://palembangdigital.org/}
+\end{itemize}
+
+
+\end{document}

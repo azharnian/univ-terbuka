@@ -1,0 +1,148 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath, amssymb}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+\usepackage{hyperref}
+\renewcommand{\arraystretch}{1.6}
+
+\newcommand{\psetheader}[4]{%
+  \noindent
+  \begin{minipage}[t]{0.6\textwidth}
+    #1\\
+    #2\\
+    #3
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.35\textwidth}
+    \raggedleft #4
+  \end{minipage}
+
+  \vspace{0.5\baselineskip}
+  \hrule
+  \vspace{1em}
+}
+
+\newcommand{\NamaMatkul}{Kalkulus Diferensial}
+\newcommand{\NamaDiskusi}{Diskusi Sesi 7}
+\newcommand{\NamaLengkap}{Anas Azhar}
+\newcommand{\NIM}{056413438}
+\newcommand{\FakultasProdi}{FST - Matematika}
+\newcommand{\Kampus}{Universitas Terbuka}
+\newcommand{\Term}{2025.1}
+\newcommand{\TanggalTugas}{Minggu, 23 November 2025}
+
+\title{\NamaMatkul{} - \NamaDiskusi}
+\author{\NamaLengkap{} \\ \FakultasProdi{} - \NIM{} \\ \Kampus}
+\date{\today}
+
+
+\begin{document}
+
+\psetheader
+  {\textit{\NamaMatkul} - \NamaDiskusi}
+  {\Kampus, \FakultasProdi, \Term}
+  {\NamaLengkap{} (\NIM)}
+  {\TanggalTugas}
+
+\section*{Soal}
+Tentukan asimtot tegak dan asimtot datar fungsi dengan persamaan
+\[
+xy^2 - 4y^2 - 16x = 0.
+\]
+
+\section*{Jawaban}
+
+Mulai dari persamaan kurva:
+\[
+xy^2 - 4y^2 - 16x = 0.
+\]
+
+\noindent Kelompokkan suku-suku yang memuat $y^2$:
+\[
+xy^2 - 4y^2 - 16x = 0
+\quad\Longrightarrow\quad
+y^2(x-4) - 16x = 0.
+\]
+
+\noindent
+Pindahkan $16x$ ke ruas kanan:
+\[
+y^2(x-4) = 16x.
+\]
+
+\noindent
+Selama $x \neq 4$, dapat dibagi dengan $(x-4)$:
+\[
+y^2 = \frac{16x}{x-4}.
+\]
+
+\subsection*{Asimtot Tegak}
+
+Asimtot tegak terjadi jika ketika $x$ mendekati suatu bilangan $a$, nilai $y$ menuju tak hingga. Dari
+\[
+y^2 = \frac{16x}{x-4},
+\]
+perhatikan perilaku saat $x \to 4$.
+
+\noindent
+Untuk $x \to 4$ diperoleh
+\[
+\frac{16x}{x-4} \to \pm\infty,
+\]
+sehingga
+\[
+y^2 \to \infty \quad\Longrightarrow\quad |y| \to \infty.
+\]
+
+\noindent
+Jadi, $x = 4$ adalah asimtot tegak kurva tersebut.
+
+\[
+\boxed{\text{Asimtot tegak: } x = 4}
+\]
+
+\subsection*{Asimtot Datar}
+
+Asimtot datar dicari dari limit $y$ saat $x \to \pm\infty$. Dari
+\[
+y^2 = \frac{16x}{x-4}
+= 16 \cdot \frac{x}{x-4},
+\]
+Hitung limit saat $x \to \infty$:
+\[
+\lim_{x\to\infty} y^2
+= 16 \cdot \lim_{x\to\infty} \frac{x}{x-4}
+= 16 \cdot 1 = 16.
+\]
+
+\noindent
+Maka
+\[
+\lim_{x\to\infty} y = \pm 4.
+\]
+
+\noindent
+Artinya, grafik kurva mendekati dua garis horizontal $y = 4$ dan $y = -4$ ketika $x$ menuju tak hingga.
+
+\[
+\boxed{\text{Asimtot datar: } y = 4 \text{ dan } y = -4}
+\]
+
+\subsection*{Kesimpulan}
+
+Asimtot-asimtot dari kurva dengan persamaan
+\[
+xy^2 - 4y^2 - 16x = 0
+\]
+adalah:
+\[
+\text{asimtot tegak: } x = 4, \qquad
+\text{asimtot datar: } y = 4 \text{ dan } y = -4.
+\]
+
+\end{document}

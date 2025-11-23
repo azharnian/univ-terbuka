@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{hyperref}
+\renewcommand{\arraystretch}{1.6}
+
+\newcommand{\psetheader}[4]{%
+  \noindent
+  \begin{minipage}[t]{0.6\textwidth}
+    #1\\
+    #2\\
+    #3
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.35\textwidth}
+    \raggedleft #4
+  \end{minipage}
+
+  \vspace{0.5\baselineskip}
+  \hrule
+  \vspace{1em}
+}
+
+\newcommand{\NamaMatkul}{Matematika Dasar}
+\newcommand{\NamaDiskusi}{Diskusi Sesi 7}
+\newcommand{\NamaLengkap}{Anas Azhar}
+\newcommand{\NIM}{056413438}
+\newcommand{\FakultasProdi}{FST - Matematika}
+\newcommand{\Kampus}{Universitas Terbuka}
+\newcommand{\Term}{2025.1}
+\newcommand{\TanggalTugas}{Minggu, 23 November 2025}
+
+\title{\NamaMatkul{} - \NamaDiskusi}
+\author{\NamaLengkap{} \\ \FakultasProdi{} - \NIM{} \\ \Kampus}
+\date{\today}
+
+
+\begin{document}
+
+\psetheader
+  {\textit{\NamaMatkul} - \NamaDiskusi}
+  {\Kampus, \FakultasProdi, \Term}
+  {\NamaLengkap{} (\NIM)}
+  {\TanggalTugas}
+
+
+\section*{Soal 1. Misalkan $B = \mathbb{N}$ dan $C = \{1\} \cup \{2n \mid n \in \mathbb{N}\}$. Tunjukkan bahwa $B \preceq C$.}
+
+\section*{Jawaban}
+
+\subsection*{Membuktikan bahwa $B \preceq C$}
+
+Diketahui:
+\[
+B = \mathbb{N} = \{1,2,3,4,\dots\}
+\]
+\[
+C = \{1\} \cup \{2n \mid n \in \mathbb{N}\} = \{1,2,4,6,8,\dots\}.
+\]
+
+Untuk menunjukkan bahwa $B \preceq C$, cukup dibuktikan bahwa ada fungsi injektif
+\[
+f : B \rightarrow C.
+\]
+
+Definisikan fungsi:
+\[
+f(n) = 2n.
+\]
+
+Jelas bahwa $f(n) \in C$, karena semua bilangan genap merupakan anggota $C$.
+
+Untuk mengecek injektivitas, misalkan
+\[
+f(n_1) = f(n_2).
+\]
+Maka:
+\[
+2n_1 = 2n_2 \Rightarrow n_1 = n_2.
+\]
+
+Dengan demikian, $f$ adalah fungsi injektif dari $\mathbb{N}$ ke $C$, sehingga:
+\[
+B \preceq C.
+\]
+
+\vspace{8pt}
+\noindent
+Secara kardinalitas:
+\[
+|\mathbb{N}| \le |C|.
+\]
+
+\section*{Soal 2. Periksa apakah $A = \left\{ \frac{1}{n} \mid n \in \mathbb{N} \right\}$. merupakan himpunan terbilang?
+}
+
+\section*{Jawaban}
+\subsection*{Menunjukkan bahwa $A = \left\{ \frac{1}{n} \mid n \in \mathbb{N} \right\}$ terbilang}
+
+Definisikan himpunan:
+\[
+A = \left\{1, \frac12, \frac13, \frac14, \dots\right\}.
+\]
+
+Tentukan fungsi berikut:
+\[
+g : \mathbb{N} \rightarrow A,\qquad g(n) = \frac{1}{n}.
+\]
+
+\paragraph{Injektivitas:}
+Misalkan
+\[
+g(n_1) = g(n_2)
+\]
+artinya
+\[
+\frac{1}{n_1} = \frac{1}{n_2} \Rightarrow n_1 = n_2.
+\]
+Jadi $g$ injektif.
+
+\paragraph{Surjektivitas:}
+Ambil sebarang $a \in A$. Maka ia berbentuk:
+\[
+a = \frac{1}{n}
+\]
+untuk suatu $n \in \mathbb{N}$.
+Sehingga:
+\[
+g(n) = a,
+\]
+maka $g$ surjektif.
+
+\paragraph{Kesimpulan:}
+Karena $g$ injektif dan surjektif, maka $g$ bijektif dan terdapat korespondensi satu-satu antara $\mathbb{N}$ dan $A$. Oleh karena itu:
+\[
+|A| = |\mathbb{N}| = \aleph_0
+\]
+yang berarti $A$ merupakan himpunan \textbf{terbilang}.
+
+\end{document}

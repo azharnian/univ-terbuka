@@ -1,0 +1,400 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{hyperref}
+\renewcommand{\arraystretch}{1.6}
+
+\newcommand{\psetheader}[4]{%
+  \noindent
+  \begin{minipage}[t]{0.6\textwidth}
+    #1\\
+    #2\\
+    #3
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.35\textwidth}
+    \raggedleft #4
+  \end{minipage}
+
+  \vspace{0.5\baselineskip}
+  \hrule
+  \vspace{1em}
+}
+
+\newcommand{\NamaMatkul}{Aljabar Elementer}
+\newcommand{\NamaDiskusi}{Diskusi Sesi 7}
+\newcommand{\NamaLengkap}{Anas Azhar}
+\newcommand{\NIM}{056413438}
+\newcommand{\FakultasProdi}{FST - Matematika}
+\newcommand{\Kampus}{Universitas Terbuka}
+\newcommand{\Term}{2025.1}
+\newcommand{\TanggalTugas}{Minggu, 23 November 2025}
+
+\title{\NamaMatkul{} - \NamaDiskusi}
+\author{\NamaLengkap{} \\ \FakultasProdi{} - \NIM{} \\ \Kampus}
+\date{\today}
+
+
+\begin{document}
+
+\psetheader
+  {\textit{\NamaMatkul} - \NamaDiskusi}
+  {\Kampus, \FakultasProdi, \Term}
+  {\NamaLengkap{} (\NIM)}
+  {\TanggalTugas}
+
+
+\section*{Soal 1}
+Berikan contoh sebuah himpunan vektor di $\mathbb{R}^2$, kemudian buktikan apakah himpunan tersebut bebas linear atau tidak.
+
+
+\section*{Jawaban}
+
+\subsection*{Himpunan vektor yang \textit{bebas linear} di $\mathbb{R}^2$}
+
+Ambil himpunan vektor
+\[
+S = \left\{
+v_1 =
+\begin{pmatrix}
+\frac{1}{2} \\[4pt]
+\frac{2}{3}
+\end{pmatrix},
+\quad
+v_2 =
+\begin{pmatrix}
+\frac{3}{4} \\[4pt]
+\frac{1}{6}
+\end{pmatrix}
+\right\}
+\subset \mathbb{R}^2.
+\]
+
+\noindent Menurut definisi, himpunan $S$ dikatakan \textit{bebas linear} jika satu-satunya solusi dari SPL homogen
+\[
+k_1 v_1 + k_2 v_2 = \mathbf{0}
+\]
+adalah $k_1 = 0$ dan $k_2 = 0$.
+
+\noindent Tulis persamaan $k_1 v_1 + k_2 v_2 = \mathbf{0}$ dalam bentuk komponen:
+\[
+k_1
+\begin{pmatrix}
+\frac{1}{2} \\[4pt]
+\frac{2}{3}
+\end{pmatrix}
++
+k_2
+\begin{pmatrix}
+\frac{3}{4} \\[4pt]
+\frac{1}{6}
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 \\[2pt]
+0
+\end{pmatrix}.
+\]
+
+\noindent Ini ekuivalen dengan sistem persamaan linear:
+\[
+\begin{cases}
+\displaystyle \frac{1}{2}k_1 + \frac{3}{4}k_2 = 0,\\[6pt]
+\displaystyle \frac{2}{3}k_1 + \frac{1}{6}k_2 = 0.
+\end{cases}
+\]
+
+\noindent Sistem tersebut dapat ditulis dalam bentuk matriks:
+\[
+\begin{bmatrix}
+\frac{1}{2} & \frac{3}{4} \\
+\frac{2}{3} & \frac{1}{6}
+\end{bmatrix}
+\begin{bmatrix}
+k_1 \\[2pt]
+k_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 \\[2pt]
+0
+\end{bmatrix}.
+\]
+
+\noindent OBE (Operasi Baris Elementer) pada matriks koefisien (bentuk diperluas dengan ruas kanan nol):
+
+\[
+\left[
+\begin{array}{cc|c}
+\frac{1}{2} & \frac{3}{4} & 0 \\
+\frac{2}{3} & \frac{1}{6} & 0
+\end{array}
+\right].
+\]
+
+\noindent Hilangkan elemen di bawah pivot pertama $\frac{1}{2}$:
+\[
+R_2 \leftarrow R_2 - \frac{\frac{2}{3}}{\frac{1}{2}} R_1
+= R_2 - \frac{4}{3} R_1.
+\]
+
+\noindent Hitung baris kedua yang baru:
+\[
+\frac{2}{3} - \frac{4}{3}\cdot \frac{1}{2}
+= \frac{2}{3} - \frac{2}{3} = 0,
+\]
+\[
+\frac{1}{6} - \frac{4}{3}\cdot \frac{3}{4}
+= \frac{1}{6} - 1
+= -\frac{5}{6},
+\]
+dan ruas kanan tetap $0$:
+\[
+0 - \frac{4}{3}\cdot 0 = 0.
+\]
+
+\noindent Sehingga matriksnya menjadi:
+\[
+\left[
+\begin{array}{cc|c}
+\frac{1}{2} & \frac{3}{4} & 0 \\
+0 & -\frac{5}{6} & 0
+\end{array}
+\right].
+\]
+
+\noindent Dari baris kedua:
+\[
+-\frac{5}{6}k_2 = 0 \quad \Rightarrow \quad k_2 = 0.
+\]
+Substitusi ke baris pertama:
+\[
+\frac{1}{2}k_1 + \frac{3}{4}\cdot 0 = 0
+\quad \Rightarrow \quad k_1 = 0.
+\]
+
+\noindent Jadi satu-satunya solusi SPL homogen ini adalah
+\[
+k_1 = 0, \quad k_2 = 0.
+\]
+
+\noindent Artinya \textbf{tidak ada solusi non-trivial} (tidak ada solusi dengan $(k_1,k_2) \neq (0,0)$). 
+
+\medskip
+\noindent
+Dengan demikian, berdasarkan definisi,
+\[
+S = \left\{v_1, v_2\right\}
+\text{ adalah himpunan vektor yang \textbf{bebas linear} di } \mathbb{R}^2.
+\]
+
+\section*{Soal 2}
+Berikan contoh sebuah himpunan vektor yang membentang $\mathbb{R}^3$
+
+\section*{Jawaban}
+
+Ambil tiga vektor di $\mathbb{R}^3$ berikut:
+\[
+a =
+\begin{pmatrix}
+\frac{1}{2} \\[4pt]
+0 \\[4pt]
+0
+\end{pmatrix},
+\quad
+b =
+\begin{pmatrix}
+\frac{1}{3} \\[4pt]
+\frac{2}{3} \\[4pt]
+0
+\end{pmatrix},
+\quad
+c =
+\begin{pmatrix}
+\frac{1}{4} \\[4pt]
+\frac{1}{2} \\[4pt]
+\frac{3}{4}
+\end{pmatrix}.
+\]
+
+\noindent Tunjukkan bahwa $\{a,b,c\}$ membentang $\mathbb{R}^3$, artinya untuk setiap
+\[
+u =
+\begin{pmatrix}
+x \\[2pt]
+y \\[2pt]
+z
+\end{pmatrix}
+\in \mathbb{R}^3
+\]
+ada skalar $k_1,k_2,k_3 \in \mathbb{R}$ sehingga
+\[
+k_1 a + k_2 b + k_3 c = u.
+\]
+
+\[
+k_1
+\begin{pmatrix}
+\frac{1}{2} \\[4pt]
+0 \\[4pt]
+0
+\end{pmatrix}
++
+k_2
+\begin{pmatrix}
+\frac{1}{3} \\[4pt]
+\frac{2}{3} \\[4pt]
+0
+\end{pmatrix}
++
+k_3
+\begin{pmatrix}
+\frac{1}{4} \\[4pt]
+\frac{1}{2} \\[4pt]
+\frac{3}{4}
+\end{pmatrix}
+=
+\begin{pmatrix}
+x \\[4pt]
+y \\[4pt]
+z
+\end{pmatrix}.
+\]
+
+\noindent Ekuivalen dengan sistem persamaan linear:
+\[
+\begin{cases}
+\displaystyle \frac{1}{2}k_1 + \frac{1}{3}k_2 + \frac{1}{4}k_3 = x,\\[6pt]
+\displaystyle 0\cdot k_1 + \frac{2}{3}k_2 + \frac{1}{2}k_3 = y,\\[6pt]
+\displaystyle 0\cdot k_1 + 0\cdot k_2 + \frac{3}{4}k_3 = z.
+\end{cases}
+\]
+
+\noindent Bentuk matriks diperluas:
+\[
+\left[
+\begin{array}{ccc|c}
+\frac{1}{2} & \frac{1}{3} & \frac{1}{4} & x \\
+0 & \frac{2}{3} & \frac{1}{2} & y \\
+0 & 0 & \frac{3}{4} & z
+\end{array}
+\right].
+\]
+
+\noindent Matriks koefisien:
+\[
+A =
+\begin{bmatrix}
+\frac{1}{2} & \frac{1}{3} & \frac{1}{4} \\
+0 & \frac{2}{3} & \frac{1}{2} \\
+0 & 0 & \frac{3}{4}
+\end{bmatrix}
+\]
+
+\noindent Dengan diagonal utama
+\[
+\frac{1}{2},\ \frac{2}{3},\ \frac{3}{4},
+\]
+yang semuanya \emph{tidak nol}. Ini berarti $\det(A) = \frac{1}{2}\cdot\frac{2}{3}\cdot\frac{3}{4} \neq 0$, sehingga matriks $A$ invertibel dan sistem selalu memiliki solusi tunggal untuk setiap $(x,y,z)$.
+
+\noindent Menyelesaikan sistem ini secara eksplisit dengan substitusi balik.
+
+\paragraph{Langkah 1: Menentukan $k_3$.}
+Dari persamaan ketiga:
+\[
+\frac{3}{4}k_3 = z
+\quad\Rightarrow\quad
+k_3 = \frac{4}{3}z.
+\]
+
+\paragraph{Langkah 2: Menentukan $k_2$.}
+Dari persamaan kedua:
+\[
+\frac{2}{3}k_2 + \frac{1}{2}k_3 = y.
+\]
+Substitusikan $k_3 = \frac{4}{3}z$:
+\[
+\frac{2}{3}k_2 + \frac{1}{2}\cdot\frac{4}{3}z = y
+\quad\Rightarrow\quad
+\frac{2}{3}k_2 + \frac{2}{3}z = y.
+\]
+Maka
+\[
+\frac{2}{3}k_2 = y - \frac{2}{3}z
+\quad\Rightarrow\quad
+k_2 = \frac{3}{2}y - z.
+\]
+
+\paragraph{Langkah 3: Menentukan $k_1$.}
+Dari persamaan pertama:
+\[
+\frac{1}{2}k_1 + \frac{1}{3}k_2 + \frac{1}{4}k_3 = x.
+\]
+Substitusikan $k_2 = \frac{3}{2}y - z$ dan $k_3 = \frac{4}{3}z$:
+\[
+\frac{1}{3}k_2 = \frac{1}{3}\left(\frac{3}{2}y - z\right)
+= \frac{1}{2}y - \frac{1}{3}z,
+\]
+\[
+\frac{1}{4}k_3 = \frac{1}{4}\cdot \frac{4}{3}z = \frac{1}{3}z.
+\]
+Sehingga
+\[
+\frac{1}{3}k_2 + \frac{1}{4}k_3
+= \left(\frac{1}{2}y - \frac{1}{3}z\right) + \frac{1}{3}z
+= \frac{1}{2}y.
+\]
+Maka persamaan pertama menjadi:
+\[
+\frac{1}{2}k_1 + \frac{1}{2}y = x
+\quad\Rightarrow\quad
+\frac{1}{2}k_1 = x - \frac{1}{2}y
+\quad\Rightarrow\quad
+k_1 = 2x - y.
+\]
+
+\noindent
+Untuk setiap
+\[
+u =
+\begin{pmatrix}
+x \\ y \\ z
+\end{pmatrix}
+\in \mathbb{R}^3,
+\]
+diperoleh
+\[
+\boxed{
+\begin{aligned}
+k_1 &= 2x - y,\\[4pt]
+k_2 &= \frac{3}{2}y - z,\\[4pt]
+k_3 &= \frac{4}{3}z.
+\end{aligned}
+}
+\]
+
+\noindent Artinya, untuk setiap $u \in \mathbb{R}^3$ terdapat skalar $k_1,k_2,k_3$ (yang merupakan bilangan real, dan berasal dari perhitungan dengan koefisien rasional) sedemikian sehingga
+\[
+k_1 a + k_2 b + k_3 c = u.
+\]
+
+\noindent Dengan demikian, himpunan vektor
+\[
+\left\{a,b,c\right\}
+=
+\left\{
+\begin{pmatrix}
+\frac{1}{2} \\[2pt] 0 \\[2pt] 0
+\end{pmatrix},
+\begin{pmatrix}
+\frac{1}{3} \\[2pt] \frac{2}{3} \\[2pt] 0
+\end{pmatrix},
+\begin{pmatrix}
+\frac{1}{4} \\[2pt] \frac{1}{2} \\[2pt] \frac{3}{4}
+\end{pmatrix}
+\right\}
+\]
+\textbf{membentang} $\mathbb{R}^3$, karena kombinasi linear $k_1 a + k_2 b + k_3 c$ dapat menghasilkan setiap vektor $u \in \mathbb{R}^3$.
+
+\end{document}
